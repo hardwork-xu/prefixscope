@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project": "PrefixScope",
+  "version": "0.1.0",
+  "frozen_before_implementation": true,
+  "primary_target": {"metric": "median_analysis_speedup_vs_ordered_lru", "minimum": 2.0, "capacity_count": 64, "workloads": ["qwen_traceA_2048", "qwen_traceB_2048"], "aggregation": "each workload separately"},
+  "memory_target": {"metric": "fenwick_allocated_slots_ratio_compact_over_unbounded", "maximum": 0.25, "workload": "hot_loop_20000", "note": "structural array storage, NOT process RSS"},
+  "correctness": {"absolute_error_reused_tokens": 0, "baseline": "independent finite-capacity OrderedDict LRU", "seeds": 100},
+  "measurement": {"warmup_runs": 1, "repeats": 5, "order": "seeded shuffle per repeat", "timer": "perf_counter_ns", "parallelism": 1, "timed_scope": "fresh analyzer initialization, all trace analysis, curve construction; excludes file IO and normalization", "memory": "separate fresh subprocess ru_maxrss, including input loading; macOS bytes/Linux KiB normalized", "latency": "repeat median/min/max, no p99 claim"},
+  "sizes": [256, 2048],
+  "capacity_grids": [1, 8, 64],
+  "capacity_pages": {"start": 64, "step": 256, "count": 64},
+  "semantics": "serial completed requests; all membership queries before request touches; equal full blocks; all pages touched left-to-right; no pinning, output insertion, TTL or concurrent requests",
+  "backends": ["compact", "unbounded", "lru"],
+  "data": {"qwen_revision": "5f7439c51ec248a0c585f7d90a41a6f57773b912", "selection": "first N records in file order, no sorting or performance-based selection", "transformation": "drop incomplete final block, chain supplied block IDs with namespace; input tokens include uncached remainder"},
+  "resource_limits": {"max_unique_pages": 2000000, "max_pages_per_request": 100000, "max_line_bytes": 16777216},
+  "claims_excluded": ["inference speedup", "GPU support", "exact vLLM prediction", "SOTA", "new Mattson algorithm"]
+}
