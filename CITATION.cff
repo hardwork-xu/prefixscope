@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite this software and the upstream methods/data described in NOTICE.md. / 请引用本软件及NOTICE.md中的上游方法和数据。"
+title: "PrefixScope: Auditable Prefix-Cache Capacity Analysis"
+type: software
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Xu
+    given-names: Yixian
+abstract: "An independent, compacting Fenwick implementation of prefix-aware LRU capacity analysis, with reproducible differential testing and public trace benchmarks."
+keywords:
+  - KV cache
+  - LRU
+  - capacity planning
+  - trace analysis
