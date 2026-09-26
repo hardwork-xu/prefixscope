@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "data_kind": "synthetic",
+  "semantics": "serial-request-entry-lru",
+  "curve": [
+    {
+      "capacity_pages": 0,
+      "reused_tokens": 0,
+      "total_tokens": 640,
+      "hit_rate": 0.0
+    },
+    {
+      "capacity_pages": 4,
+      "reused_tokens": 0,
+      "total_tokens": 640,
+      "hit_rate": 0.0
+    },
+    {
+      "capacity_pages": 5,
+      "reused_tokens": 448,
+      "total_tokens": 640,
+      "hit_rate": 0.7
+    },
+    {
+      "capacity_pages": 16,
+      "reused_tokens": 448,
+      "total_tokens": 640,
+      "hit_rate": 0.7
+    },
+    {
+      "capacity_pages": 64,
+      "reused_tokens": 448,
+      "total_tokens": 640,
+      "hit_rate": 0.7
+    }
+  ],
+  "stats": {
+    "unique_pages": 12,
+    "allocated_slots": 1024,
+    "compactions": 0,
+    "accesses": 40,
+    "requests": 8,
+    "measured_requests": 8,
+    "total_tokens": 640
+  }
+}

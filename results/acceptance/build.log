@@ -1,0 +1,183 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src/prefixscope.egg-info/PKG-INFO
+writing dependency_links to src/prefixscope.egg-info/dependency_links.txt
+writing entry points to src/prefixscope.egg-info/entry_points.txt
+writing top-level names to src/prefixscope.egg-info/top_level.txt
+reading manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+adding license file 'NOTICE.md'
+writing manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src/prefixscope.egg-info/PKG-INFO
+writing dependency_links to src/prefixscope.egg-info/dependency_links.txt
+writing entry points to src/prefixscope.egg-info/entry_points.txt
+writing top-level names to src/prefixscope.egg-info/top_level.txt
+reading manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+adding license file 'NOTICE.md'
+writing manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+running check
+creating prefixscope-0.1.0
+creating prefixscope-0.1.0/assets
+creating prefixscope-0.1.0/docs/en
+creating prefixscope-0.1.0/docs/zh
+creating prefixscope-0.1.0/examples
+creating prefixscope-0.1.0/experiments
+creating prefixscope-0.1.0/results
+creating prefixscope-0.1.0/scripts
+creating prefixscope-0.1.0/src/prefixscope
+creating prefixscope-0.1.0/src/prefixscope.egg-info
+creating prefixscope-0.1.0/tests
+creating prefixscope-0.1.0/third_party
+copying files to prefixscope-0.1.0...
+copying .dockerignore -> prefixscope-0.1.0
+copying AGENTS.md -> prefixscope-0.1.0
+copying CITATION.cff -> prefixscope-0.1.0
+copying CONTRIBUTING.md -> prefixscope-0.1.0
+copying CONTRIBUTING_zh.md -> prefixscope-0.1.0
+copying Dockerfile -> prefixscope-0.1.0
+copying LICENSE -> prefixscope-0.1.0
+copying MANIFEST.in -> prefixscope-0.1.0
+copying Makefile -> prefixscope-0.1.0
+copying NOTICE.md -> prefixscope-0.1.0
+copying README.md -> prefixscope-0.1.0
+copying README_zh.md -> prefixscope-0.1.0
+copying SECURITY.md -> prefixscope-0.1.0
+copying SECURITY_zh.md -> prefixscope-0.1.0
+copying benchmark.py -> prefixscope-0.1.0
+copying pyproject.toml -> prefixscope-0.1.0
+copying requirements.in -> prefixscope-0.1.0
+copying requirements.lock -> prefixscope-0.1.0
+copying assets/benchmark.svg -> prefixscope-0.1.0/assets
+copying assets/capacity-curves.svg -> prefixscope-0.1.0/assets
+copying assets/memory.svg -> prefixscope-0.1.0/assets
+copying docs/en/ARCHITECTURE.md -> prefixscope-0.1.0/docs/en
+copying docs/en/DEVELOPMENT.md -> prefixscope-0.1.0/docs/en
+copying docs/en/EXPERIMENTS.md -> prefixscope-0.1.0/docs/en
+copying docs/en/RELEASE.md -> prefixscope-0.1.0/docs/en
+copying docs/en/RESEARCH.md -> prefixscope-0.1.0/docs/en
+copying docs/en/RESUME.md -> prefixscope-0.1.0/docs/en
+copying docs/en/WALKTHROUGH.md -> prefixscope-0.1.0/docs/en
+copying docs/zh/ARCHITECTURE.md -> prefixscope-0.1.0/docs/zh
+copying docs/zh/DEVELOPMENT.md -> prefixscope-0.1.0/docs/zh
+copying docs/zh/EXPERIMENTS.md -> prefixscope-0.1.0/docs/zh
+copying docs/zh/RELEASE.md -> prefixscope-0.1.0/docs/zh
+copying docs/zh/RESEARCH.md -> prefixscope-0.1.0/docs/zh
+copying docs/zh/RESUME.md -> prefixscope-0.1.0/docs/zh
+copying docs/zh/WALKTHROUGH.md -> prefixscope-0.1.0/docs/zh
+copying examples/tokens.jsonl -> prefixscope-0.1.0/examples
+copying experiments/contract.json -> prefixscope-0.1.0/experiments
+copying experiments/sources.json -> prefixscope-0.1.0/experiments
+copying results/benchmark.json -> prefixscope-0.1.0/results
+copying results/environment.json -> prefixscope-0.1.0/results
+copying results/figures.en.md -> prefixscope-0.1.0/results
+copying results/figures.zh.md -> prefixscope-0.1.0/results
+copying results/summary.json -> prefixscope-0.1.0/results
+copying results/table.en.md -> prefixscope-0.1.0/results
+copying results/table.zh.md -> prefixscope-0.1.0/results
+copying scripts/acceptance.py -> prefixscope-0.1.0/scripts
+copying scripts/analyze_results.py -> prefixscope-0.1.0/scripts
+copying scripts/check_docs.py -> prefixscope-0.1.0/scripts
+copying scripts/check_evidence.py -> prefixscope-0.1.0/scripts
+copying scripts/check_public.py -> prefixscope-0.1.0/scripts
+copying scripts/fetch_traces.py -> prefixscope-0.1.0/scripts
+copying scripts/plot_capacity.py -> prefixscope-0.1.0/scripts
+copying scripts/verify_install.py -> prefixscope-0.1.0/scripts
+copying src/prefixscope/__init__.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope/__main__.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope/cli.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope/model.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope/profiler.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope/rank.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope/reference.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope/trace.py -> prefixscope-0.1.0/src/prefixscope
+copying src/prefixscope.egg-info/PKG-INFO -> prefixscope-0.1.0/src/prefixscope.egg-info
+copying src/prefixscope.egg-info/SOURCES.txt -> prefixscope-0.1.0/src/prefixscope.egg-info
+copying src/prefixscope.egg-info/dependency_links.txt -> prefixscope-0.1.0/src/prefixscope.egg-info
+copying src/prefixscope.egg-info/entry_points.txt -> prefixscope-0.1.0/src/prefixscope.egg-info
+copying src/prefixscope.egg-info/top_level.txt -> prefixscope-0.1.0/src/prefixscope.egg-info
+copying tests/test_benchmark.py -> prefixscope-0.1.0/tests
+copying tests/test_engine.py -> prefixscope-0.1.0/tests
+copying tests/test_trace_cli.py -> prefixscope-0.1.0/tests
+copying third_party/CFF_LICENSE -> prefixscope-0.1.0/third_party
+copying third_party/QWEN_DATA_LICENSE -> prefixscope-0.1.0/third_party
+copying third_party/cff-1.2.0.schema.json -> prefixscope-0.1.0/third_party
+copying src/prefixscope.egg-info/SOURCES.txt -> prefixscope-0.1.0/src/prefixscope.egg-info
+Writing prefixscope-0.1.0/setup.cfg
+Creating tar archive
+removing 'prefixscope-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src/prefixscope.egg-info/PKG-INFO
+writing dependency_links to src/prefixscope.egg-info/dependency_links.txt
+writing entry points to src/prefixscope.egg-info/entry_points.txt
+writing top-level names to src/prefixscope.egg-info/top_level.txt
+reading manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+adding license file 'NOTICE.md'
+writing manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/prefixscope
+copying src/prefixscope/trace.py -> build/lib/prefixscope
+copying src/prefixscope/__init__.py -> build/lib/prefixscope
+copying src/prefixscope/model.py -> build/lib/prefixscope
+copying src/prefixscope/cli.py -> build/lib/prefixscope
+copying src/prefixscope/reference.py -> build/lib/prefixscope
+copying src/prefixscope/profiler.py -> build/lib/prefixscope
+copying src/prefixscope/rank.py -> build/lib/prefixscope
+copying src/prefixscope/__main__.py -> build/lib/prefixscope
+running egg_info
+writing src/prefixscope.egg-info/PKG-INFO
+writing dependency_links to src/prefixscope.egg-info/dependency_links.txt
+writing entry points to src/prefixscope.egg-info/entry_points.txt
+writing top-level names to src/prefixscope.egg-info/top_level.txt
+reading manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+adding license file 'NOTICE.md'
+writing manifest file 'src/prefixscope.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-10.9-universal2/wheel
+running install
+running install_lib
+creating build/bdist.macosx-10.9-universal2/wheel
+creating build/bdist.macosx-10.9-universal2/wheel/prefixscope
+copying build/lib/prefixscope/trace.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+copying build/lib/prefixscope/__init__.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+copying build/lib/prefixscope/model.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+copying build/lib/prefixscope/cli.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+copying build/lib/prefixscope/reference.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+copying build/lib/prefixscope/profiler.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+copying build/lib/prefixscope/rank.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+copying build/lib/prefixscope/__main__.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope
+running install_egg_info
+Copying src/prefixscope.egg-info to build/bdist.macosx-10.9-universal2/wheel/./prefixscope-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-10.9-universal2/wheel/prefixscope-0.1.0.dist-info/WHEEL
+creating './dist/.tmp-9sm0_myd/prefixscope-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-10.9-universal2/wheel' to it
+adding 'prefixscope/__init__.py'
+adding 'prefixscope/__main__.py'
+adding 'prefixscope/cli.py'
+adding 'prefixscope/model.py'
+adding 'prefixscope/profiler.py'
+adding 'prefixscope/rank.py'
+adding 'prefixscope/reference.py'
+adding 'prefixscope/trace.py'
+adding 'prefixscope-0.1.0.dist-info/licenses/LICENSE'
+adding 'prefixscope-0.1.0.dist-info/licenses/NOTICE.md'
+adding 'prefixscope-0.1.0.dist-info/METADATA'
+adding 'prefixscope-0.1.0.dist-info/WHEEL'
+adding 'prefixscope-0.1.0.dist-info/entry_points.txt'
+adding 'prefixscope-0.1.0.dist-info/top_level.txt'
+adding 'prefixscope-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-10.9-universal2/wheel
+Successfully built prefixscope-0.1.0.tar.gz and prefixscope-0.1.0-py3-none-any.whl

@@ -1,0 +1,7 @@
+{"step": 0, "command": ["<clean-env>/bin/python", "-m", "pip", "install", "--require-hashes", "-r", "./requirements.lock"], "exit_code": 0}
+{"step": 1, "command": ["<clean-env>/bin/python", "-m", "pip", "install", "--no-index", "--no-deps", "./dist/prefixscope-0.1.0-py3-none-any.whl"], "exit_code": 0}
+{"step": 2, "command": ["<clean-env>/bin/python", "-c", "from prefixscope import Profile,Request; p=Profile(); p.observe(Request(('a',),16)); assert p.curve([1])[0]['total_tokens']==16"], "exit_code": 0}
+{"step": 3, "command": ["<clean-env>/bin/python", "-m", "prefixscope", "demo"], "exit_code": 0}
+{"step": 4, "command": ["<clean-env>/bin/python", "-m", "prefixscope", "analyze", "./examples/tokens.jsonl", "--format", "tokens", "--capacities", "0,4,5,16,64"], "exit_code": 0}
+{"step": 5, "command": ["<clean-env>/bin/python", "-m", "pip", "check"], "exit_code": 0}
+Clean environment and installed wheel passed / 干净环境与已安装wheel验证通过

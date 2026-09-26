@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-26T16:59:04.033557+00:00",
+  "checks": [
+    {
+      "name": "api",
+      "command": [
+        "python",
+        "-c",
+        "from prefixscope import Profile, Request; p=Profile(); p.observe(Request(('a',),16)); assert p.curve([1])[0]['reused_tokens']==0; print('API passed')"
+      ],
+      "started_at_utc": "2026-09-26T16:58:30.685883+00:00",
+      "duration_seconds": 0.04218308301642537,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "API passed\n",
+      "evidence": "results/acceptance/api.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "demo",
+      "command": [
+        "python",
+        "-m",
+        "prefixscope",
+        "demo"
+      ],
+      "started_at_utc": "2026-09-26T16:58:30.778333+00:00",
+      "duration_seconds": 0.08319379109889269,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\n  \"schema_version\": 1,\n  \"status\": \"passed\",\n  \"data_kind\": \"synthetic\",\n  \"semantics\": \"serial-request-entry-lru\",\n  \"curve\": [\n    {\n      \"capacity_pages\": 0,\n      \"reused_tokens\": 0,\n      \"total_tokens\": 640,\n      \"hit_rate\": 0.0\n    },\n    {\n      \"capacity_pages\": 4,\n      \"reused_tokens\": 0,\n      \"total_tokens\": 640,\n      \"hit_rate\": 0.0\n    },\n    {\n      \"capacity_pages\": 5,\n      \"reused_tokens\": 448,\n      \"total_tokens\": 640,\n      \"hit_rate\": 0.7\n    },\n    {\n      \"capacity_pages\": 16,\n      \"reused_tokens\": 448,\n      \"total_tokens\": 640,\n      \"hit_rate\": 0.7\n    },\n    {\n      \"capacity_pages\": 64,\n      \"reused_tokens\": 448,\n      \"total_tokens\": 640,\n      \"hit_rate\": 0.7\n    }\n  ],\n  \"stats\": {\n    \"unique_pages\": 12,\n    \"allocated_slots\": 1024,\n    \"compactions\": 0,\n    \"accesses\": 40,\n    \"requests\": 8,\n    \"measured_requests\": 8,\n    \"total_tokens\": 640\n  }\n}\n",
+      "evidence": "results/acceptance/demo.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "unit",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-m",
+        "not integration",
+        "-q"
+      ],
+      "started_at_utc": "2026-09-26T16:58:30.913494+00:00",
+      "duration_seconds": 0.6631428329274058,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "........................................................................ [ 42%]\n........................................................................ [ 84%]\n...........................                                              [100%]\n171 passed, 11 deselected in 0.42s\n",
+      "evidence": "results/acceptance/unit.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "integration",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-m",
+        "integration",
+        "-q"
+      ],
+      "started_at_utc": "2026-09-26T16:58:31.626445+00:00",
+      "duration_seconds": 2.206806709058583,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "...........                                                              [100%]\n11 passed, 171 deselected in 2.00s\n",
+      "evidence": "results/acceptance/integration.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "lint",
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts",
+        "benchmark.py"
+      ],
+      "started_at_utc": "2026-09-26T16:58:33.882927+00:00",
+      "duration_seconds": 0.06040787498932332,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "All checks passed!\n",
+      "evidence": "results/acceptance/lint.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "format",
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts",
+        "benchmark.py"
+      ],
+      "started_at_utc": "2026-09-26T16:58:33.997739+00:00",
+      "duration_seconds": 0.05221749993506819,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "20 files already formatted\n",
+      "evidence": "results/acceptance/format.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "types",
+      "command": [
+        "python",
+        "-m",
+        "mypy"
+      ],
+      "started_at_utc": "2026-09-26T16:58:34.106435+00:00",
+      "duration_seconds": 0.46558545797597617,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Success: no issues found in 8 source files\n",
+      "evidence": "results/acceptance/types.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "benchmark",
+      "command": [
+        "python",
+        "benchmark.py",
+        "--quick",
+        "--output",
+        "results/acceptance/smoke.json"
+      ],
+      "started_at_utc": "2026-09-26T16:58:34.622140+00:00",
+      "duration_seconds": 0.7498266670154408,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "results/acceptance/smoke.json\nquick_hot_32: passed\nquick_cold_16: passed\n",
+      "evidence": "results/acceptance/benchmark.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "full_benchmark_evidence",
+      "command": [
+        "python",
+        "scripts/check_evidence.py"
+      ],
+      "started_at_utc": "2026-09-26T16:58:35.419849+00:00",
+      "duration_seconds": 0.12799820792861283,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\"status\": \"passed\", \"run_id\": \"c89dbb47-d85d-4866-9cdc-8b469be1c9aa\", \"samples\": 360, \"warmups\": 72, \"source_sha256\": \"503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff\", \"evidence\": \"results/benchmark.json\", \"execution_command\": \"python benchmark.py --output results/benchmark.json\", \"started_at_utc\": \"2026-09-26T16:45:27.130526+00:00\", \"finished_at_utc\": \"2026-09-26T16:50:08.485693+00:00\"}\n",
+      "evidence": "results/acceptance/full_benchmark_evidence.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "analysis",
+      "command": [
+        "python",
+        "scripts/analyze_results.py",
+        "results/benchmark.json"
+      ],
+      "started_at_utc": "2026-09-26T16:58:35.595775+00:00",
+      "duration_seconds": 0.6139940000139177,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "",
+      "evidence": "results/acceptance/analysis.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "build",
+      "command": [
+        "python",
+        "-m",
+        "build",
+        "--no-isolation"
+      ],
+      "started_at_utc": "2026-09-26T16:58:36.270126+00:00",
+      "duration_seconds": 1.1521171249914914,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "ing build/lib/prefixscope/__main__.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope\nrunning install_egg_info\nCopying src/prefixscope.egg-info to build/bdist.macosx-10.9-universal2/wheel/./prefixscope-0.1.0-py3.12.egg-info\nrunning install_scripts\ncreating build/bdist.macosx-10.9-universal2/wheel/prefixscope-0.1.0.dist-info/WHEEL\ncreating './dist/.tmp-9sm0_myd/prefixscope-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-10.9-universal2/wheel' to it\nadding 'prefixscope/__init__.py'\nadding 'prefixscope/__main__.py'\nadding 'prefixscope/cli.py'\nadding 'prefixscope/model.py'\nadding 'prefixscope/profiler.py'\nadding 'prefixscope/rank.py'\nadding 'prefixscope/reference.py'\nadding 'prefixscope/trace.py'\nadding 'prefixscope-0.1.0.dist-info/licenses/LICENSE'\nadding 'prefixscope-0.1.0.dist-info/licenses/NOTICE.md'\nadding 'prefixscope-0.1.0.dist-info/METADATA'\nadding 'prefixscope-0.1.0.dist-info/WHEEL'\nadding 'prefixscope-0.1.0.dist-info/entry_points.txt'\nadding 'prefixscope-0.1.0.dist-info/top_level.txt'\nadding 'prefixscope-0.1.0.dist-info/RECORD'\nremoving build/bdist.macosx-10.9-universal2/wheel\nSuccessfully built prefixscope-0.1.0.tar.gz and prefixscope-0.1.0-py3-none-any.whl\n",
+      "evidence": "results/acceptance/build.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "clean_install",
+      "command": [
+        "python",
+        "scripts/verify_install.py"
+      ],
+      "started_at_utc": "2026-09-26T16:58:37.481078+00:00",
+      "duration_seconds": 24.93543099996168,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\"step\": 0, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"pip\", \"install\", \"--require-hashes\", \"-r\", \"./requirements.lock\"], \"exit_code\": 0}\n{\"step\": 1, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"pip\", \"install\", \"--no-index\", \"--no-deps\", \"./dist/prefixscope-0.1.0-py3-none-any.whl\"], \"exit_code\": 0}\n{\"step\": 2, \"command\": [\"<clean-env>/bin/python\", \"-c\", \"from prefixscope import Profile,Request; p=Profile(); p.observe(Request(('a',),16)); assert p.curve([1])[0]['total_tokens']==16\"], \"exit_code\": 0}\n{\"step\": 3, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"prefixscope\", \"demo\"], \"exit_code\": 0}\n{\"step\": 4, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"prefixscope\", \"analyze\", \"./examples/tokens.jsonl\", \"--format\", \"tokens\", \"--capacities\", \"0,4,5,16,64\"], \"exit_code\": 0}\n{\"step\": 5, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"pip\", \"check\"], \"exit_code\": 0}\nClean environment and installed wheel passed / 干净环境与已安装wheel验证通过\n",
+      "evidence": "results/acceptance/clean_install.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "capacity_plot",
+      "command": [
+        "python",
+        "scripts/plot_capacity.py",
+        "results/benchmark.json"
+      ],
+      "started_at_utc": "2026-09-26T16:59:02.463857+00:00",
+      "duration_seconds": 0.8507584580220282,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "",
+      "evidence": "results/acceptance/capacity_plot.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "docs",
+      "command": [
+        "python",
+        "scripts/check_docs.py"
+      ],
+      "started_at_utc": "2026-09-26T16:59:03.363926+00:00",
+      "duration_seconds": 0.2842966659227386,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\"status\": \"passed\", \"markdown_files\": 26, \"local_links\": 186, \"bilingual_pairs\": 10, \"citation_schema\": \"1.2.0\", \"semantic_translation_review\": \"manual; automated check covers pairs, commands, numeric tables only\"}\n",
+      "evidence": "results/acceptance/docs.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "public",
+      "command": [
+        "python",
+        "scripts/check_public.py"
+      ],
+      "started_at_utc": "2026-09-26T16:59:03.697233+00:00",
+      "duration_seconds": 0.12538920808583498,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\"status\": \"passed\", \"tracked_files\": 70, \"scope\": \"common patterns, not a proof that arbitrary private data is absent\"}\n",
+      "evidence": "results/acceptance/public.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at_utc": "2026-09-26T16:59:03.871550+00:00",
+      "duration_seconds": 0.02507758396677673,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "",
+      "evidence": "results/acceptance/diff.log",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "docker_build",
+      "status": "not_run",
+      "exit_code": null,
+      "command": "docker build -t prefixscope:local .",
+      "summary": "Docker executable absent on local host / 本机没有Docker可执行文件",
+      "evidence": "results/environment.json",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "docker_run",
+      "status": "not_run",
+      "exit_code": null,
+      "command": "docker run --rm prefixscope:local demo",
+      "summary": "Docker executable absent on local host / 本机没有Docker可执行文件",
+      "evidence": "results/environment.json",
+      "source": {
+        "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "status": "passed_with_unverified_container"
+}
