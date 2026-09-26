@@ -1,0 +1,941 @@
+{
+  "schema_version": 1,
+  "run_id": "c89dbb47-d85d-4866-9cdc-8b469be1c9aa",
+  "implementation": {
+    "git_revision": "9bcdd46dc083eeb0823e0cdf315667b91273c717",
+    "working_tree_dirty": true,
+    "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+    "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+    "version": "0.1.0"
+  },
+  "environment": {
+    "os": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "cpu": "Apple M1 Pro",
+    "logical_cpus": 10,
+    "python": "3.12.2",
+    "implementation": "CPython",
+    "parallelism": 1,
+    "timer": "perf_counter_ns"
+  },
+  "started_at_utc": "2026-09-26T16:45:27.130526+00:00",
+  "raw_status": "passed",
+  "quick": false,
+  "rows": [
+    {
+      "workload": "qwen_traceA_256",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 60.919042,
+      "lru_median_ms": 4.241375,
+      "unbounded_median_ms": 61.220291,
+      "speedup_lru_over_compact": 0.06962314016691201,
+      "speedup_unbounded_over_compact": 1.004945071197935,
+      "compact_min_ms": 59.857083,
+      "compact_max_ms": 68.666791,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 4202.298519402193
+    },
+    {
+      "workload": "qwen_traceA_256",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 61.959917,
+      "lru_median_ms": 34.42575,
+      "unbounded_median_ms": 62.525625,
+      "speedup_lru_over_compact": 0.5556132362152777,
+      "speedup_unbounded_over_compact": 1.009130225271283,
+      "compact_min_ms": 59.666333,
+      "compact_max_ms": 63.569958,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 4131.703404315406
+    },
+    {
+      "workload": "qwen_traceA_256",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 62.525292,
+      "lru_median_ms": 329.578958,
+      "unbounded_median_ms": 63.401625,
+      "speedup_lru_over_compact": 5.271130249179804,
+      "speedup_unbounded_over_compact": 1.0140156562563514,
+      "compact_min_ms": 59.620542,
+      "compact_max_ms": 64.562542,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 4094.343133975288
+    },
+    {
+      "workload": "qwen_traceA_2048",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 716.439,
+      "lru_median_ms": 37.603583,
+      "unbounded_median_ms": 770.252333,
+      "speedup_lru_over_compact": 0.05248678952430005,
+      "speedup_unbounded_over_compact": 1.0751122328628118,
+      "compact_min_ms": 714.776334,
+      "compact_max_ms": 767.489667,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 2858.582517143818
+    },
+    {
+      "workload": "qwen_traceA_2048",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 745.216958,
+      "lru_median_ms": 327.17175,
+      "unbounded_median_ms": 770.096041,
+      "speedup_lru_over_compact": 0.4390288579557525,
+      "speedup_unbounded_over_compact": 1.033385019936704,
+      "compact_min_ms": 718.009,
+      "compact_max_ms": 842.0795,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 2748.1929631558382
+    },
+    {
+      "workload": "qwen_traceA_2048",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 761.55275,
+      "lru_median_ms": 4314.699917,
+      "unbounded_median_ms": 762.391917,
+      "speedup_lru_over_compact": 5.66566126509293,
+      "speedup_unbounded_over_compact": 1.0011019157898122,
+      "compact_min_ms": 753.192875,
+      "compact_max_ms": 814.828084,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 2689.242472041497
+    },
+    {
+      "workload": "qwen_traceB_256",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 30.968708,
+      "lru_median_ms": 2.051209,
+      "unbounded_median_ms": 30.861208,
+      "speedup_lru_over_compact": 0.06623489103904497,
+      "speedup_unbounded_over_compact": 0.9965287541217412,
+      "compact_min_ms": 30.535542,
+      "compact_max_ms": 36.590708,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 8266.408789155816
+    },
+    {
+      "workload": "qwen_traceB_256",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 30.805083,
+      "lru_median_ms": 16.914333,
+      "unbounded_median_ms": 30.991917,
+      "speedup_lru_over_compact": 0.5490760404703341,
+      "speedup_unbounded_over_compact": 1.0060650380328466,
+      "compact_min_ms": 29.793458,
+      "compact_max_ms": 32.33,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 8310.316839594298
+    },
+    {
+      "workload": "qwen_traceB_256",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 39.287583,
+      "lru_median_ms": 194.428334,
+      "unbounded_median_ms": 36.918708,
+      "speedup_lru_over_compact": 4.948849462182491,
+      "speedup_unbounded_over_compact": 0.9397042317416167,
+      "compact_min_ms": 32.39475,
+      "compact_max_ms": 47.876417,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 6516.0536854608745
+    },
+    {
+      "workload": "qwen_traceB_2048",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 453.33725,
+      "lru_median_ms": 18.382125,
+      "unbounded_median_ms": 405.468542,
+      "speedup_lru_over_compact": 0.04054845482033519,
+      "speedup_unbounded_over_compact": 0.8944081740470257,
+      "compact_min_ms": 372.003208,
+      "compact_max_ms": 516.308667,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 4517.608028018875
+    },
+    {
+      "workload": "qwen_traceB_2048",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 593.063583,
+      "lru_median_ms": 195.365833,
+      "unbounded_median_ms": 572.80425,
+      "speedup_lru_over_compact": 0.32941802295758227,
+      "speedup_unbounded_over_compact": 0.9658395261811245,
+      "compact_min_ms": 348.703667,
+      "compact_max_ms": 706.79725,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 3453.2553653694836
+    },
+    {
+      "workload": "qwen_traceB_2048",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 437.086708,
+      "lru_median_ms": 2347.13525,
+      "unbounded_median_ms": 454.408375,
+      "speedup_lru_over_compact": 5.369953391490459,
+      "speedup_unbounded_over_compact": 1.0396298187132242,
+      "compact_min_ms": 391.492708,
+      "compact_max_ms": 528.241958,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 4685.5691617142475
+    },
+    {
+      "workload": "hot_loop_20000",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 1876.092166,
+      "lru_median_ms": 97.24875,
+      "unbounded_median_ms": 1787.436916,
+      "speedup_lru_over_compact": 0.05183580623725071,
+      "speedup_unbounded_over_compact": 0.9527447256554452,
+      "compact_min_ms": 915.949125,
+      "compact_max_ms": 2466.525333,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 10660.45707266175
+    },
+    {
+      "workload": "hot_loop_20000",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 940.316792,
+      "lru_median_ms": 370.381959,
+      "unbounded_median_ms": 1830.392917,
+      "speedup_lru_over_compact": 0.3938906144728297,
+      "speedup_unbounded_over_compact": 1.946570488342401,
+      "compact_min_ms": 818.950625,
+      "compact_max_ms": 1119.350125,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 21269.42767602942
+    },
+    {
+      "workload": "hot_loop_20000",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 1056.913834,
+      "lru_median_ms": 2834.9225,
+      "unbounded_median_ms": 1420.206583,
+      "speedup_lru_over_compact": 2.6822645411603157,
+      "speedup_unbounded_over_compact": 1.3437297699331656,
+      "compact_min_ms": 921.749166,
+      "compact_max_ms": 1205.305334,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 18923.018468126134
+    },
+    {
+      "workload": "cold_scan_4096",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 147.727709,
+      "lru_median_ms": 15.437625,
+      "unbounded_median_ms": 162.075917,
+      "speedup_lru_over_compact": 0.10450053753964329,
+      "speedup_unbounded_over_compact": 1.0971260442413007,
+      "compact_min_ms": 132.424792,
+      "compact_max_ms": 167.1955,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 27726.687347463027
+    },
+    {
+      "workload": "cold_scan_4096",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 157.682542,
+      "lru_median_ms": 119.57825,
+      "unbounded_median_ms": 199.239834,
+      "speedup_lru_over_compact": 0.7583480611315868,
+      "speedup_unbounded_over_compact": 1.263550368182167,
+      "compact_min_ms": 136.302,
+      "compact_max_ms": 205.575625,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 25976.24282338117
+    },
+    {
+      "workload": "cold_scan_4096",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 144.041875,
+      "lru_median_ms": 2423.122167,
+      "unbounded_median_ms": 145.176625,
+      "speedup_lru_over_compact": 16.822345356168128,
+      "speedup_unbounded_over_compact": 1.0078779174458816,
+      "compact_min_ms": 135.7115,
+      "compact_max_ms": 213.713583,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 28436.175244178125
+    },
+    {
+      "workload": "mixed_chat_2048",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 225.478959,
+      "lru_median_ms": 10.929792,
+      "unbounded_median_ms": 228.392959,
+      "speedup_lru_over_compact": 0.04847366711498788,
+      "speedup_unbounded_over_compact": 1.0129236005564493,
+      "compact_min_ms": 212.015458,
+      "compact_max_ms": 244.048584,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 9082.887419220346
+    },
+    {
+      "workload": "mixed_chat_2048",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 369.786375,
+      "lru_median_ms": 141.37275,
+      "unbounded_median_ms": 339.437583,
+      "speedup_lru_over_compact": 0.3823092454393432,
+      "speedup_unbounded_over_compact": 0.9179288528410491,
+      "compact_min_ms": 316.078084,
+      "compact_max_ms": 412.968958,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 5538.332773888708
+    },
+    {
+      "workload": "mixed_chat_2048",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 402.471209,
+      "lru_median_ms": 1684.098625,
+      "unbounded_median_ms": 582.479958,
+      "speedup_lru_over_compact": 4.184395274346196,
+      "speedup_unbounded_over_compact": 1.4472586981992046,
+      "compact_min_ms": 239.651542,
+      "compact_max_ms": 685.457209,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 5088.562744869534
+    },
+    {
+      "workload": "short_requests_4096",
+      "capacity_count": 1,
+      "status": "passed",
+      "compact_median_ms": 15.904209,
+      "lru_median_ms": 3.005083,
+      "unbounded_median_ms": 16.045042,
+      "speedup_lru_over_compact": 0.18894891283181703,
+      "speedup_unbounded_over_compact": 1.0088550772943188,
+      "compact_min_ms": 14.068167,
+      "compact_max_ms": 17.090208,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 257541.88718219183
+    },
+    {
+      "workload": "short_requests_4096",
+      "capacity_count": 8,
+      "status": "passed",
+      "compact_median_ms": 17.211375,
+      "lru_median_ms": 11.57025,
+      "unbounded_median_ms": 17.862333,
+      "speedup_lru_over_compact": 0.6722443732705842,
+      "speedup_unbounded_over_compact": 1.0378213826611762,
+      "compact_min_ms": 16.24175,
+      "compact_max_ms": 21.11775,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 237982.14843381193
+    },
+    {
+      "workload": "short_requests_4096",
+      "capacity_count": 64,
+      "status": "passed",
+      "compact_median_ms": 15.588125,
+      "lru_median_ms": 90.043958,
+      "unbounded_median_ms": 15.541958,
+      "speedup_lru_over_compact": 5.776445723908424,
+      "speedup_unbounded_over_compact": 0.9970383224409607,
+      "compact_min_ms": 14.961208,
+      "compact_max_ms": 16.305417,
+      "samples_per_method": 5,
+      "compact_requests_per_second": 262764.12333106133
+    }
+  ],
+  "memory": [
+    {
+      "workload": "qwen_traceA_256",
+      "capacity_count": 64,
+      "compact_allocated_slots": 32768,
+      "unbounded_allocated_slots": 32768,
+      "slots_ratio": 1.0,
+      "stats": {
+        "compact": {
+          "unique_pages": 19407,
+          "allocated_slots": 32768,
+          "compactions": 0,
+          "accesses": 26402,
+          "requests": 256,
+          "measured_requests": 256,
+          "total_tokens": 424211
+        },
+        "unbounded": {
+          "unique_pages": 19407,
+          "allocated_slots": 32768,
+          "compactions": 0,
+          "accesses": 26402,
+          "requests": 256,
+          "measured_requests": 256,
+          "total_tokens": 424211
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 31604736,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 19407,
+            "allocated_slots": 32768,
+            "compactions": 0,
+            "accesses": 26402,
+            "requests": 256,
+            "measured_requests": 256,
+            "total_tokens": 424211
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 32079872,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 19407,
+            "allocated_slots": 32768,
+            "compactions": 0,
+            "accesses": 26402,
+            "requests": 256,
+            "measured_requests": 256,
+            "total_tokens": 424211
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 100433920,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    },
+    {
+      "workload": "qwen_traceA_2048",
+      "capacity_count": 64,
+      "compact_allocated_slots": 262144,
+      "unbounded_allocated_slots": 262144,
+      "slots_ratio": 1.0,
+      "stats": {
+        "compact": {
+          "unique_pages": 139904,
+          "allocated_slots": 262144,
+          "compactions": 0,
+          "accesses": 239141,
+          "requests": 2048,
+          "measured_requests": 2048,
+          "total_tokens": 3841320
+        },
+        "unbounded": {
+          "unique_pages": 139904,
+          "allocated_slots": 262144,
+          "compactions": 0,
+          "accesses": 239141,
+          "requests": 2048,
+          "measured_requests": 2048,
+          "total_tokens": 3841320
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 66961408,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 139904,
+            "allocated_slots": 262144,
+            "compactions": 0,
+            "accesses": 239141,
+            "requests": 2048,
+            "measured_requests": 2048,
+            "total_tokens": 3841320
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 66306048,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 139904,
+            "allocated_slots": 262144,
+            "compactions": 0,
+            "accesses": 239141,
+            "requests": 2048,
+            "measured_requests": 2048,
+            "total_tokens": 3841320
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 176783360,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    },
+    {
+      "workload": "qwen_traceB_256",
+      "capacity_count": 64,
+      "compact_allocated_slots": 16384,
+      "unbounded_allocated_slots": 16384,
+      "slots_ratio": 1.0,
+      "stats": {
+        "compact": {
+          "unique_pages": 8540,
+          "allocated_slots": 16384,
+          "compactions": 0,
+          "accesses": 13409,
+          "requests": 256,
+          "measured_requests": 256,
+          "total_tokens": 216572
+        },
+        "unbounded": {
+          "unique_pages": 8540,
+          "allocated_slots": 16384,
+          "compactions": 0,
+          "accesses": 13409,
+          "requests": 256,
+          "measured_requests": 256,
+          "total_tokens": 216572
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 28770304,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 8540,
+            "allocated_slots": 16384,
+            "compactions": 0,
+            "accesses": 13409,
+            "requests": 256,
+            "measured_requests": 256,
+            "total_tokens": 216572
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 28590080,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 8540,
+            "allocated_slots": 16384,
+            "compactions": 0,
+            "accesses": 13409,
+            "requests": 256,
+            "measured_requests": 256,
+            "total_tokens": 216572
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 71516160,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    },
+    {
+      "workload": "qwen_traceB_2048",
+      "capacity_count": 64,
+      "compact_allocated_slots": 131072,
+      "unbounded_allocated_slots": 131072,
+      "slots_ratio": 1.0,
+      "stats": {
+        "compact": {
+          "unique_pages": 49593,
+          "allocated_slots": 131072,
+          "compactions": 0,
+          "accesses": 107652,
+          "requests": 2048,
+          "measured_requests": 2048,
+          "total_tokens": 1738379
+        },
+        "unbounded": {
+          "unique_pages": 49593,
+          "allocated_slots": 131072,
+          "compactions": 0,
+          "accesses": 107652,
+          "requests": 2048,
+          "measured_requests": 2048,
+          "total_tokens": 1738379
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 46661632,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 49593,
+            "allocated_slots": 131072,
+            "compactions": 0,
+            "accesses": 107652,
+            "requests": 2048,
+            "measured_requests": 2048,
+            "total_tokens": 1738379
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 45023232,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 49593,
+            "allocated_slots": 131072,
+            "compactions": 0,
+            "accesses": 107652,
+            "requests": 2048,
+            "measured_requests": 2048,
+            "total_tokens": 1738379
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 138018816,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    },
+    {
+      "workload": "hot_loop_20000",
+      "capacity_count": 64,
+      "compact_allocated_slots": 1024,
+      "unbounded_allocated_slots": 524288,
+      "slots_ratio": 0.001953125,
+      "stats": {
+        "compact": {
+          "unique_pages": 128,
+          "allocated_slots": 1024,
+          "compactions": 356,
+          "accesses": 320000,
+          "requests": 20000,
+          "measured_requests": 20000,
+          "total_tokens": 5270000
+        },
+        "unbounded": {
+          "unique_pages": 128,
+          "allocated_slots": 524288,
+          "compactions": 0,
+          "accesses": 320000,
+          "requests": 20000,
+          "measured_requests": 20000,
+          "total_tokens": 5270000
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 49152000,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 128,
+            "allocated_slots": 1024,
+            "compactions": 356,
+            "accesses": 320000,
+            "requests": 20000,
+            "measured_requests": 20000,
+            "total_tokens": 5270000
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 50970624,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 128,
+            "allocated_slots": 524288,
+            "compactions": 0,
+            "accesses": 320000,
+            "requests": 20000,
+            "measured_requests": 20000,
+            "total_tokens": 5270000
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 49397760,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    },
+    {
+      "workload": "cold_scan_4096",
+      "capacity_count": 64,
+      "compact_allocated_slots": 65536,
+      "unbounded_allocated_slots": 65536,
+      "slots_ratio": 1.0,
+      "stats": {
+        "compact": {
+          "unique_pages": 65536,
+          "allocated_slots": 65536,
+          "compactions": 0,
+          "accesses": 65536,
+          "requests": 4096,
+          "measured_requests": 4096,
+          "total_tokens": 1079296
+        },
+        "unbounded": {
+          "unique_pages": 65536,
+          "allocated_slots": 65536,
+          "compactions": 0,
+          "accesses": 65536,
+          "requests": 4096,
+          "measured_requests": 4096,
+          "total_tokens": 1079296
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 31883264,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 65536,
+            "allocated_slots": 65536,
+            "compactions": 0,
+            "accesses": 65536,
+            "requests": 4096,
+            "measured_requests": 4096,
+            "total_tokens": 1079296
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 37781504,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 65536,
+            "allocated_slots": 65536,
+            "compactions": 0,
+            "accesses": 65536,
+            "requests": 4096,
+            "measured_requests": 4096,
+            "total_tokens": 1079296
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 127238144,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    },
+    {
+      "workload": "mixed_chat_2048",
+      "capacity_count": 64,
+      "compact_allocated_slots": 32768,
+      "unbounded_allocated_slots": 65536,
+      "slots_ratio": 0.5,
+      "stats": {
+        "compact": {
+          "unique_pages": 17152,
+          "allocated_slots": 32768,
+          "compactions": 4,
+          "accesses": 65536,
+          "requests": 2048,
+          "measured_requests": 2048,
+          "total_tokens": 1063936
+        },
+        "unbounded": {
+          "unique_pages": 17152,
+          "allocated_slots": 65536,
+          "compactions": 0,
+          "accesses": 65536,
+          "requests": 2048,
+          "measured_requests": 2048,
+          "total_tokens": 1063936
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 35471360,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 17152,
+            "allocated_slots": 32768,
+            "compactions": 4,
+            "accesses": 65536,
+            "requests": 2048,
+            "measured_requests": 2048,
+            "total_tokens": 1063936
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 31670272,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 17152,
+            "allocated_slots": 65536,
+            "compactions": 0,
+            "accesses": 65536,
+            "requests": 2048,
+            "measured_requests": 2048,
+            "total_tokens": 1063936
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 101203968,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    },
+    {
+      "workload": "short_requests_4096",
+      "capacity_count": 64,
+      "compact_allocated_slots": 2048,
+      "unbounded_allocated_slots": 4096,
+      "slots_ratio": 0.5,
+      "stats": {
+        "compact": {
+          "unique_pages": 996,
+          "allocated_slots": 2048,
+          "compactions": 2,
+          "accesses": 3584,
+          "requests": 4096,
+          "measured_requests": 4096,
+          "total_tokens": 88064
+        },
+        "unbounded": {
+          "unique_pages": 996,
+          "allocated_slots": 4096,
+          "compactions": 0,
+          "accesses": 3584,
+          "requests": 4096,
+          "measured_requests": 4096,
+          "total_tokens": 88064
+        }
+      },
+      "process_peak_rss": {
+        "compact": {
+          "status": "passed",
+          "peak_rss_bytes": 27049984,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 996,
+            "allocated_slots": 2048,
+            "compactions": 2,
+            "accesses": 3584,
+            "requests": 4096,
+            "measured_requests": 4096,
+            "total_tokens": 88064
+          }
+        },
+        "unbounded": {
+          "status": "passed",
+          "peak_rss_bytes": 26624000,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {
+            "unique_pages": 996,
+            "allocated_slots": 4096,
+            "compactions": 0,
+            "accesses": 3584,
+            "requests": 4096,
+            "measured_requests": 4096,
+            "total_tokens": 88064
+          }
+        },
+        "lru": {
+          "status": "passed",
+          "peak_rss_bytes": 31604736,
+          "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
+          "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+          "samples": 1,
+          "stats": {}
+        }
+      }
+    }
+  ],
+  "targets": [
+    {
+      "workload": "qwen_traceA_2048",
+      "metric": "median_analysis_speedup_vs_ordered_lru",
+      "minimum": 2.0,
+      "measured": 5.66566126509293,
+      "status": "met"
+    },
+    {
+      "workload": "qwen_traceB_2048",
+      "metric": "median_analysis_speedup_vs_ordered_lru",
+      "minimum": 2.0,
+      "measured": 5.369953391490459,
+      "status": "met"
+    },
+    {
+      "workload": "hot_loop_20000",
+      "metric": "fenwick_allocated_slots_ratio_compact_over_unbounded",
+      "maximum": 0.25,
+      "measured": 0.001953125,
+      "status": "met"
+    }
+  ],
+  "failures": []
+}

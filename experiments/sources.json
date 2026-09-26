@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "project": "PrefixScope",
+  "checked_at_utc": "2026-09-26T16:44:28Z",
+  "topic_window": {
+    "start": "2026-09-21",
+    "end": "2026-09-27",
+    "timezone": "Asia/Shanghai"
+  },
+  "scope_en": "Primary-source verification for topic selection, existing methods, model boundaries and public trace provenance. This register contains no project performance results.",
+  "scope_zh": "用于选题、已有方法、模型边界及公开轨迹来源的一手资料核查；本登记不包含项目性能结果。",
+  "sources": [
+    {
+      "id": "kvset-paper",
+      "title": "The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems",
+      "kind": "preprint",
+      "url": "https://arxiv.org/abs/2609.27746v1",
+      "full_text_url": "https://arxiv.org/pdf/2609.27746v1",
+      "version": "arXiv:2609.27746v1",
+      "published_at_utc": "2026-09-23T11:59:45Z",
+      "inspection": [
+        "abstract",
+        "submission_history",
+        "paper_pdf"
+      ],
+      "relevance_en": "This-week evidence for KV-cache capacity planning; prior application of Mattson/Fenwick analysis to prefix reuse. PrefixScope does not claim this idea or its production results as its own.",
+      "relevance_zh": "本周 KV 缓存容量规划新工作的证据；已有将 Mattson/Fenwick 分析用于前缀复用的方法。PrefixScope 不将该思路及生产实验结果归为自身贡献。"
+    },
+    {
+      "id": "kvset-code",
+      "title": "KV Cache Capacity Estimator",
+      "kind": "official_repository",
+      "url": "https://github.com/llc-kc/kv_cache_capacity_estimator/tree/a90dc298151a8e117aa37e3c30fc0686de5225fa",
+      "revision": "a90dc298151a8e117aa37e3c30fc0686de5225fa",
+      "commit_at_utc": "2026-09-24T13:34:45Z",
+      "inspected_paths": [
+        "README.md",
+        "src/kv_capacity_estimator/analysis.py",
+        "src/kv_capacity_estimator/simulator.py"
+      ],
+      "relevance_en": "Existing implementation establishes originality boundaries, including consecutive-prefix metrics. No upstream code is bundled and no unmeasured performance comparison against it is claimed.",
+      "relevance_zh": "已有实现界定原创性边界，包括连续前缀指标。未打包上游代码，也不声称未经测量的对比性能。"
+    },
+    {
+      "id": "hspec",
+      "title": "H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache",
+      "kind": "preprint",
+      "url": "https://arxiv.org/abs/2609.24197v1",
+      "version": "arXiv:2609.24197v1",
+      "published_at_utc": "2026-09-21T07:11:29Z",
+      "inspection": [
+        "abstract",
+        "submission_history"
+      ],
+      "relevance_en": "Current speculative-decoding candidate; not selected because faithful local evaluation would need trained draft/target models.",
+      "relevance_zh": "近期投机解码候选；忠实本地评估需要训练好的 draft/target 模型，故未选。"
+    },
+    {
+      "id": "lowbit-opd",
+      "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+      "kind": "preprint",
+      "url": "https://arxiv.org/abs/2609.26708v1",
+      "version": "arXiv:2609.26708v1",
+      "published_at_utc": "2026-09-22T17:01:09Z",
+      "inspection": [
+        "abstract",
+        "submission_history"
+      ],
+      "relevance_en": "Current low-bit candidate; teacher/student training and reasoning evaluation exceed this experiment scope.",
+      "relevance_zh": "近期低比特候选；teacher/student 训练及推理能力评测超出本实验范围。"
+    },
+    {
+      "id": "mattson",
+      "title": "Evaluation Techniques for Storage Hierarchies",
+      "kind": "paper",
+      "url": "https://doi.org/10.1147/sj.92.0078",
+      "full_text_url": "https://www.bitsavers.org/pdf/ibm/IBM_Systems_Journal/092/ibmsj0902B.pdf",
+      "publication_year": 1970,
+      "inspection": [
+        "original_paper_scan_excerpt",
+        "bibliographic_metadata"
+      ],
+      "relevance_en": "Historical attribution for stack-based all-capacity cache analysis; not a PrefixScope invention.",
+      "relevance_zh": "基于栈的全部容量缓存分析之历史归属，并非 PrefixScope 发明。"
+    },
+    {
+      "id": "fenwick",
+      "title": "A New Data Structure for Cumulative Frequency Tables",
+      "kind": "paper",
+      "url": "https://doi.org/10.1002/spe.4380240306",
+      "publisher_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.4380240306",
+      "publication_year": 1994,
+      "inspection": [
+        "publisher_abstract",
+        "bibliographic_metadata"
+      ],
+      "relevance_en": "Attribution for the binary indexed tree used for cumulative occupied-position counts.",
+      "relevance_zh": "用于占用位置累积计数的树状数组之归属。"
+    },
+    {
+      "id": "vllm-apc",
+      "title": "Automatic Prefix Caching",
+      "kind": "official_design_document",
+      "url": "https://github.com/vllm-project/vllm/blob/379e9a1ea8a5995464d9bf775bcd36bb03a0995f/docs/design/prefix_caching.md",
+      "revision": "379e9a1ea8a5995464d9bf775bcd36bb03a0995f",
+      "commit_at_utc": "2026-09-26T16:28:32Z",
+      "inspection": [
+        "rendered_official_document",
+        "pinned_raw_markdown"
+      ],
+      "relevance_en": "Full-block and chained-identity context; pinning, output allocation and reverse release show why this serial model is not an exact vLLM predictor.",
+      "relevance_zh": "完整块和链式身份的背景；固定页、输出分配及逆序释放表明顺序模型并非 vLLM 精确预测器。"
+    },
+    {
+      "id": "qwen-traces",
+      "title": "Qwen-Bailian Anonymous Dataset",
+      "kind": "official_dataset_repository",
+      "url": "https://github.com/alibaba-edu/qwen-bailian-usagetraces-anon/tree/5f7439c51ec248a0c585f7d90a41a6f57773b912",
+      "revision": "5f7439c51ec248a0c585f7d90a41a6f57773b912",
+      "commit_at_utc": "2026-04-23T08:36:04Z",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/alibaba-edu/qwen-bailian-usagetraces-anon/blob/5f7439c51ec248a0c585f7d90a41a6f57773b912/LICENSE",
+      "inspection": [
+        "readme",
+        "license",
+        "git_lfs_pointers",
+        "traceA_http_range_sample"
+      ],
+      "relevance_en": "Public production-derived anonymized content-block traces. PrefixScope selects first N records in file order and excludes incomplete input blocks; no production deployment is reproduced.",
+      "relevance_zh": "公开的生产来源匿名内容块轨迹。PrefixScope 按文件顺序取前 N 条并排除不完整输入块；未复现生产部署。",
+      "files": [
+        {
+          "name": "qwen_traceA_blksz_16.jsonl",
+          "bytes": 56354493,
+          "sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+          "url": "https://media.githubusercontent.com/media/alibaba-edu/qwen-bailian-usagetraces-anon/5f7439c51ec248a0c585f7d90a41a6f57773b912/qwen_traceA_blksz_16.jsonl"
+        },
+        {
+          "name": "qwen_traceB_blksz_16.jsonl",
+          "bytes": 96209982,
+          "sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+          "url": "https://media.githubusercontent.com/media/alibaba-edu/qwen-bailian-usagetraces-anon/5f7439c51ec248a0c585f7d90a41a6f57773b912/qwen_traceB_blksz_16.jsonl"
+        }
+      ]
+    },
+    {
+      "id": "qwen-faq",
+      "title": "Q&A: Context Growth Pattern in Traces",
+      "kind": "official_dataset_document",
+      "url": "https://github.com/alibaba-edu/qwen-bailian-usagetraces-anon/blob/5f7439c51ec248a0c585f7d90a41a6f57773b912/docs/qa-context-growth-pattern.md",
+      "revision": "5f7439c51ec248a0c585f7d90a41a6f57773b912",
+      "inspection": [
+        "full_document"
+      ],
+      "relevance_en": "Explains special-token changes across turns and last-block padding updates; motivates complete-input-block filtering.",
+      "relevance_zh": "解释跨轮特殊 token 变化与末块 padding 更新，支持仅保留完整输入块的处理。"
+    }
+  ]
+}

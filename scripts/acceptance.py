@@ -81,6 +81,7 @@ def main() -> int:
                 else "results/acceptance/smoke.json",
             ],
         ),
+        ("full_benchmark_evidence", [py, "scripts/check_evidence.py"]),
         ("analysis", [py, "scripts/analyze_results.py", "results/benchmark.json"]),
         ("build", [py, "-m", "build", "--no-isolation"]),
         ("clean_install", [py, "scripts/verify_install.py"]),
@@ -90,6 +91,9 @@ def main() -> int:
         ("diff", ["git", "diff", "--check"]),
     ]
     records = []
+    (directory / "checks.json").write_text(
+        json.dumps({"schema_version": 1, "status": "running", "checks": records}) + "\n"
+    )
     for name, command in commands:
         item = record(name, command, directory)
         records.append(item)

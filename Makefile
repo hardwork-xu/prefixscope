@@ -14,6 +14,7 @@ check:
 	$(PYTHON) -m ruff format --check src tests scripts benchmark.py
 	$(PYTHON) -m mypy
 	$(PYTHON) scripts/check_docs.py
+	$(PYTHON) scripts/check_evidence.py
 fetch:
 	$(PYTHON) scripts/fetch_traces.py
 benchmark:

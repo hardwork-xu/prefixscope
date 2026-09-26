@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "verified_source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+  "measured_git_revision": "9bcdd46dc083eeb0823e0cdf315667b91273c717",
+  "source_matches_measurement": true,
+  "implementation_files": {
+    "src/prefixscope/__init__.py": "40ca2b79f08f317e952306250540f2e687d556c78204aed7269a43f881a6642d",
+    "src/prefixscope/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/prefixscope/cli.py": "d53ffe2440772fbc255d2b9e91e7c59a757872f19b898930d2e0be524bcf080e",
+    "src/prefixscope/model.py": "ede62d4d2558594741526af111b3edf696af7933201e88a04aa640e6d431ec52",
+    "src/prefixscope/profiler.py": "d52acc9e8a687ff0fe58fbc0d95f232bee2755bf1e0cc88d4816b37a2069f898",
+    "src/prefixscope/rank.py": "4ea29cc194f2c88953ccf671eedc76fe43513f7d50d1231ab08c54f5ac25e49d",
+    "src/prefixscope/reference.py": "0c5dcd181a2672fa2a6cfd6377e6a890a38ebd6b08f849d508f0b2177f76009c",
+    "src/prefixscope/trace.py": "666e68386ba067830fc6eee6ab0cc36950fbc9ca9d4207511af02032bd5063f2"
+  },
+  "dataset_sources": [
+    {
+      "workload": "qwen_traceA_256",
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "normalized_requests_sha256": "fb473334fd6e581bc5d788de90a637f213f8d59ca86e9c6af26d179be695f4a5",
+      "selection": "first 256 records, original order"
+    },
+    {
+      "workload": "qwen_traceA_2048",
+      "source_sha256": "07cedc9ed8aff301994ac68ed4aede8123b7603673575eeba9dd677de663db17",
+      "normalized_requests_sha256": "54735bd16f8e0fd5d5b31713af58ca85aa5ebf73daea7c73fef5877539727635",
+      "selection": "first 2048 records, original order"
+    },
+    {
+      "workload": "qwen_traceB_256",
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "normalized_requests_sha256": "75f7f0fd09a4702d241e17c9a252921accec86dd0f9d4c08a76c054c1ae67c1c",
+      "selection": "first 256 records, original order"
+    },
+    {
+      "workload": "qwen_traceB_2048",
+      "source_sha256": "68e3f98e2d601d60d0abf4b89bc8a3654372abab7b1cde6373a13d0054379d59",
+      "normalized_requests_sha256": "98a438fe2d1728a178c20869140c76ae917fa8c8585258076455070f099fdab3",
+      "selection": "first 2048 records, original order"
+    }
+  ]
+}

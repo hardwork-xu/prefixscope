@@ -27,6 +27,7 @@ def create_plots(raw: dict[str, Any], directory: Path) -> None:
     import matplotlib
 
     matplotlib.use("Agg")
+    matplotlib.rcParams["svg.hashsalt"] = "prefixscope-v0.1.0"
     import matplotlib.pyplot as plt
 
     if raw.get("schema_version") != 1 or raw.get("quick"):
@@ -59,6 +60,10 @@ def create_plots(raw: dict[str, Any], directory: Path) -> None:
     )
     figure.tight_layout(rect=(0, 0.1, 1, 1))
     figure.savefig(directory / "capacity-curves.svg", metadata={"Date": None})
+    artifact = directory / "capacity-curves.svg"
+    artifact.write_text(
+        "\n".join(line.rstrip() for line in artifact.read_text().splitlines()) + "\n"
+    )
     plt.close(figure)
 
     figure, (slots_axis, rss_axis) = plt.subplots(
@@ -123,6 +128,10 @@ def create_plots(raw: dict[str, Any], directory: Path) -> None:
     )
     figure.tight_layout(rect=(0, 0.09, 1, 1))
     figure.savefig(directory / "memory.svg", metadata={"Date": None})
+    artifact = directory / "memory.svg"
+    artifact.write_text(
+        "\n".join(line.rstrip() for line in artifact.read_text().splitlines()) + "\n"
+    )
     plt.close(figure)
 
 

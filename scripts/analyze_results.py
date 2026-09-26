@@ -206,6 +206,7 @@ def draw(summary: dict[str, Any], destination: Path) -> None:
     import matplotlib
 
     matplotlib.use("Agg")
+    matplotlib.rcParams["svg.hashsalt"] = "prefixscope-v0.1.0"
     import matplotlib.pyplot as plt
 
     names = list(dict.fromkeys(row["workload"] for row in summary["rows"]))
@@ -248,6 +249,10 @@ def draw(summary: dict[str, Any], destination: Path) -> None:
     figure.tight_layout()
     destination.parent.mkdir(parents=True, exist_ok=True)
     figure.savefig(destination, metadata={"Date": None})
+    if destination.suffix.lower() == ".svg":
+        destination.write_text(
+            "\n".join(line.rstrip() for line in destination.read_text().splitlines()) + "\n"
+        )
     plt.close(figure)
 
 

@@ -1,0 +1,36 @@
+{
+  "observed_at_utc": "2026-09-26T16:45:05.304054+00:00",
+  "os": "macOS 26.6.2",
+  "architecture": "arm64",
+  "cpu": "Apple M1 Pro",
+  "logical_cpus": 10,
+  "physical_memory_bytes": 17179869184,
+  "available_disk_bytes_at_probe": 213844496384,
+  "python": "3.12.2",
+  "compiler": "Apple clang 21.0.0",
+  "make": "available",
+  "gpu": {
+    "reported_device": "Apple M1 Pro 14-core GPU",
+    "reported_metal": "Metal 4",
+    "runtime_exercised": false,
+    "project_backend": "CPU only"
+  },
+  "docker": {
+    "executable_available": false,
+    "build": "not_run",
+    "run": "not_run",
+    "reason": "Docker, Podman and Colima executables absent"
+  },
+  "network": {
+    "pypi": "HTTP 200; hash-locked dependency installation completed",
+    "github": "authenticated API and public downloads succeeded",
+    "huggingface": "public config redirect observed; no model weights downloaded"
+  },
+  "git": {
+    "initial_workspace_repository": false,
+    "existing_project_files": false,
+    "identity": "existing configured identity; not modified",
+    "remote_at_probe": null
+  },
+  "project_model_download": "not_needed; trace analysis only"
+}
