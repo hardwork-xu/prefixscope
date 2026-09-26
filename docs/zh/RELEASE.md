@@ -51,6 +51,6 @@ docker run --rm -v "$PWD/examples:/data:ro" prefixscope:0.1.0 analyze /data/toke
 
 ## 发布状态
 
-初始包与源码已在本地准备。本次任务已授权公开 GitHub 同步，执行前先完成本地证据与公开内容扫描。实际执行后，最终仓库/CI 核验记录在 `results/publication.json`。本次交付不包含 PyPI 上传、GitHub Release 创建、DOI 注册、容器仓库推送或公网服务部署，以上均未执行。
+公开仓库为 [hardwork-xu/prefixscope](https://github.com/hardwork-xu/prefixscope)。首次公开提交 `4eefb4f` 已通过 [GitHub Actions](https://github.com/hardwork-xu/prefixscope/actions/runs/36257440298)：Python 3.11、3.12 检查，以及真实 Linux Docker 构建和示例运行。已核查匿名访问与源码同步，详见[发布证据](../../results/publication.json)。该文件标明精确验证版本，后续可有文档提交。本次交付不包含 PyPI 上传、GitHub Release 创建、DOI 注册、容器仓库推送或公网服务部署，以上均未执行。
 
 GitHub Actions 在 Ubuntu 24.04 上测试 Python 3.11、3.12，并构建和运行 CPU 容器。远端结果必须读取实际 run；本机 macOS 成功不能证明另一平台已通过。

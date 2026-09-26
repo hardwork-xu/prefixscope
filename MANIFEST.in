@@ -12,3 +12,6 @@ recursive-include assets *.svg
 recursive-include third_party *
 include results/benchmark.json results/summary.json results/environment.json
 include results/table.en.md results/table.zh.md results/figures.en.md results/figures.zh.md
+include results/publication.json results/source-verification.json
+recursive-include results/acceptance *.json *.log
+recursive-include .github/workflows *.yml

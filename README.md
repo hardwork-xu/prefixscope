@@ -1,7 +1,10 @@
 # PrefixScope
 
+[GitHub](https://github.com/hardwork-xu/prefixscope) · [CI](https://github.com/hardwork-xu/prefixscope/actions/workflows/ci.yml)
+
 [简体中文](README_zh.md) · [Research](docs/en/RESEARCH.md) · [Experiments](docs/en/EXPERIMENTS.md) · [Code walkthrough](docs/en/WALKTHROUGH.md)
 
+![checks](https://github.com/hardwork-xu/prefixscope/actions/workflows/ci.yml/badge.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Python: 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 

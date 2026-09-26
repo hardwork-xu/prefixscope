@@ -51,6 +51,6 @@ Suggested Topics: `kv-cache`, `llm-inference`, `cache-analysis`, `lru`, `fenwick
 
 ## Publication status
 
-The initial package and source are prepared locally. Public GitHub synchronization is authorized for this delivery and is performed only after the local evidence and public-content scan are complete. The final repository/CI verification is recorded in `results/publication.json` when performed. PyPI upload, GitHub Release creation, DOI registration, container registry push and public service deployment are outside this delivery and have not been executed.
+The public repository is [hardwork-xu/prefixscope](https://github.com/hardwork-xu/prefixscope). Initial publication commit `4eefb4f` passed [GitHub Actions](https://github.com/hardwork-xu/prefixscope/actions/runs/36257440298): Python 3.11 and 3.12 checks plus an actual Linux Docker build and demo run. Anonymous access and source synchronization were checked. See [publication evidence](../../results/publication.json); that file identifies the exact verified revision, and later documentation commits may follow. PyPI upload, GitHub Release creation, DOI registration, container registry push and public service deployment are outside this delivery and have not been executed.
 
 The GitHub Actions workflow tests Python 3.11 and 3.12 on Ubuntu 24.04 and builds/runs the CPU container. Each remote result must be read from the actual run. Local macOS success does not prove another platform passed.

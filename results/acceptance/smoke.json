@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "run_id": "6bdf73e1-c82a-4d92-a018-0dc67bbdd0dd",
-  "started_at_utc": "2026-09-26T16:58:34.695469+00:00",
+  "run_id": "db3eeb9f-7aa1-4fd4-b90c-348de138b3f1",
+  "started_at_utc": "2026-09-26T17:02:52.399814+00:00",
   "command": "python benchmark.py --quick --output results/acceptance/smoke.json",
   "implementation": {
-    "git_revision": "603ba02b69ff291316c9216fa96e59d34ad355a9",
+    "git_revision": "4eefb4fbced731a35900a4a1457734c73b026bde",
     "working_tree_dirty": true,
     "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
     "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
@@ -125,7 +125,7 @@
             {
               "method": "lru",
               "iteration": 0,
-              "duration_ns": 34584,
+              "duration_ns": 30208,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -133,7 +133,7 @@
             {
               "method": "compact",
               "iteration": 0,
-              "duration_ns": 297083,
+              "duration_ns": 418875,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -149,7 +149,7 @@
             {
               "method": "unbounded",
               "iteration": 0,
-              "duration_ns": 293500,
+              "duration_ns": 352958,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -165,7 +165,7 @@
             {
               "method": "unbounded",
               "iteration": 1,
-              "duration_ns": 291583,
+              "duration_ns": 305666,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -181,7 +181,7 @@
             {
               "method": "lru",
               "iteration": 1,
-              "duration_ns": 30250,
+              "duration_ns": 33417,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -189,7 +189,7 @@
             {
               "method": "compact",
               "iteration": 1,
-              "duration_ns": 291250,
+              "duration_ns": 289959,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -205,7 +205,7 @@
             {
               "method": "compact",
               "iteration": 2,
-              "duration_ns": 348250,
+              "duration_ns": 286041,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -221,7 +221,7 @@
             {
               "method": "lru",
               "iteration": 2,
-              "duration_ns": 28458,
+              "duration_ns": 28584,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -229,7 +229,7 @@
             {
               "method": "unbounded",
               "iteration": 2,
-              "duration_ns": 289958,
+              "duration_ns": 287250,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -245,7 +245,7 @@
             {
               "method": "lru",
               "iteration": 3,
-              "duration_ns": 38750,
+              "duration_ns": 27916,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -253,7 +253,7 @@
             {
               "method": "compact",
               "iteration": 3,
-              "duration_ns": 302917,
+              "duration_ns": 285750,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -269,7 +269,7 @@
             {
               "method": "unbounded",
               "iteration": 3,
-              "duration_ns": 306708,
+              "duration_ns": 286875,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -285,7 +285,7 @@
             {
               "method": "lru",
               "iteration": 4,
-              "duration_ns": 29709,
+              "duration_ns": 28917,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -293,7 +293,7 @@
             {
               "method": "compact",
               "iteration": 4,
-              "duration_ns": 289250,
+              "duration_ns": 287250,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -309,7 +309,7 @@
             {
               "method": "unbounded",
               "iteration": 4,
-              "duration_ns": 296584,
+              "duration_ns": 292375,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -327,7 +327,7 @@
             {
               "method": "lru",
               "iteration": -1,
-              "duration_ns": 33708,
+              "duration_ns": 35667,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -335,7 +335,7 @@
             {
               "method": "unbounded",
               "iteration": -1,
-              "duration_ns": 425542,
+              "duration_ns": 367541,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -351,7 +351,7 @@
             {
               "method": "compact",
               "iteration": -1,
-              "duration_ns": 317292,
+              "duration_ns": 307833,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -369,26 +369,26 @@
             "compact": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 297083,
-              "min_ns": 289250,
-              "max_ns": 348250,
-              "requests_per_second": 107714.00585021694
+              "median_ns": 287250,
+              "min_ns": 285750,
+              "max_ns": 418875,
+              "requests_per_second": 111401.21845082681
             },
             "unbounded": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 293500,
-              "min_ns": 289958,
-              "max_ns": 306708,
-              "requests_per_second": 109028.9608177172
+              "median_ns": 292375,
+              "min_ns": 286875,
+              "max_ns": 352958,
+              "requests_per_second": 109448.48225737494
             },
             "lru": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 30250,
-              "min_ns": 28458,
-              "max_ns": 38750,
-              "requests_per_second": 1057851.2396694215
+              "median_ns": 28917,
+              "min_ns": 27916,
+              "max_ns": 33417,
+              "requests_per_second": 1106615.485700453
             }
           },
           "order": [
@@ -508,7 +508,7 @@
             {
               "method": "compact",
               "iteration": 0,
-              "duration_ns": 291167,
+              "duration_ns": 288209,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -524,7 +524,7 @@
             {
               "method": "lru",
               "iteration": 0,
-              "duration_ns": 133334,
+              "duration_ns": 131500,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -532,7 +532,7 @@
             {
               "method": "unbounded",
               "iteration": 0,
-              "duration_ns": 291125,
+              "duration_ns": 290625,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -548,7 +548,7 @@
             {
               "method": "unbounded",
               "iteration": 1,
-              "duration_ns": 300667,
+              "duration_ns": 290042,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -564,7 +564,7 @@
             {
               "method": "lru",
               "iteration": 1,
-              "duration_ns": 137417,
+              "duration_ns": 146875,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -572,7 +572,7 @@
             {
               "method": "compact",
               "iteration": 1,
-              "duration_ns": 299584,
+              "duration_ns": 287708,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -588,7 +588,7 @@
             {
               "method": "lru",
               "iteration": 2,
-              "duration_ns": 132708,
+              "duration_ns": 140583,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -596,7 +596,7 @@
             {
               "method": "compact",
               "iteration": 2,
-              "duration_ns": 314417,
+              "duration_ns": 290416,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -612,7 +612,7 @@
             {
               "method": "unbounded",
               "iteration": 2,
-              "duration_ns": 377250,
+              "duration_ns": 287417,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -628,7 +628,7 @@
             {
               "method": "unbounded",
               "iteration": 3,
-              "duration_ns": 320542,
+              "duration_ns": 287833,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -644,7 +644,7 @@
             {
               "method": "compact",
               "iteration": 3,
-              "duration_ns": 295541,
+              "duration_ns": 288541,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -660,7 +660,7 @@
             {
               "method": "lru",
               "iteration": 3,
-              "duration_ns": 141208,
+              "duration_ns": 134959,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -668,7 +668,7 @@
             {
               "method": "unbounded",
               "iteration": 4,
-              "duration_ns": 301334,
+              "duration_ns": 287917,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -684,7 +684,7 @@
             {
               "method": "compact",
               "iteration": 4,
-              "duration_ns": 300500,
+              "duration_ns": 340750,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -700,7 +700,7 @@
             {
               "method": "lru",
               "iteration": 4,
-              "duration_ns": 139208,
+              "duration_ns": 200208,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -710,7 +710,7 @@
             {
               "method": "lru",
               "iteration": -1,
-              "duration_ns": 137291,
+              "duration_ns": 134750,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -718,7 +718,7 @@
             {
               "method": "unbounded",
               "iteration": -1,
-              "duration_ns": 302792,
+              "duration_ns": 301750,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -734,7 +734,7 @@
             {
               "method": "compact",
               "iteration": -1,
-              "duration_ns": 292084,
+              "duration_ns": 289458,
               "stats": {
                 "unique_pages": 16,
                 "allocated_slots": 1024,
@@ -752,26 +752,26 @@
             "compact": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 299584,
-              "min_ns": 291167,
-              "max_ns": 314417,
-              "requests_per_second": 106814.78316599017
+              "median_ns": 288541,
+              "min_ns": 287708,
+              "max_ns": 340750,
+              "requests_per_second": 110902.78331328997
             },
             "unbounded": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 301334,
-              "min_ns": 291125,
-              "max_ns": 377250,
-              "requests_per_second": 106194.4553220015
+              "median_ns": 287917,
+              "min_ns": 287417,
+              "max_ns": 290625,
+              "requests_per_second": 111143.14194715838
             },
             "lru": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 137417,
-              "min_ns": 132708,
-              "max_ns": 141208,
-              "requests_per_second": 232867.84022355312
+              "median_ns": 140583,
+              "min_ns": 131500,
+              "max_ns": 200208,
+              "requests_per_second": 227623.53911923917
             }
           },
           "order": [
@@ -827,7 +827,7 @@
           "memory": {
             "compact": {
               "status": "passed",
-              "peak_rss_bytes": 26361856,
+              "peak_rss_bytes": 25886720,
               "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
               "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
               "samples": 1,
@@ -843,7 +843,7 @@
             },
             "unbounded": {
               "status": "passed",
-              "peak_rss_bytes": 26050560,
+              "peak_rss_bytes": 25903104,
               "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
               "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
               "samples": 1,
@@ -859,7 +859,7 @@
             },
             "lru": {
               "status": "passed",
-              "peak_rss_bytes": 26165248,
+              "peak_rss_bytes": 26296320,
               "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
               "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
               "samples": 1,
@@ -873,7 +873,7 @@
         "seed": 20260927,
         "normalized_requests_sha256": "d1640e300b4563bf404787395962849048be726ad84c39e3d630f99c341b9588",
         "normalized_hash_encoding": "UTF-8 compact JSON object per request + LF; original order",
-        "loading_and_normalization_ns": 902750,
+        "loading_and_normalization_ns": 285583,
         "requests": 32,
         "full_block_accesses": 128,
         "input_tokens": 2288
@@ -905,7 +905,7 @@
             {
               "method": "lru",
               "iteration": 0,
-              "duration_ns": 14750,
+              "duration_ns": 14375,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -913,7 +913,7 @@
             {
               "method": "compact",
               "iteration": 0,
-              "duration_ns": 86041,
+              "duration_ns": 82625,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -929,7 +929,7 @@
             {
               "method": "unbounded",
               "iteration": 0,
-              "duration_ns": 84542,
+              "duration_ns": 80959,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -945,7 +945,7 @@
             {
               "method": "compact",
               "iteration": 1,
-              "duration_ns": 82875,
+              "duration_ns": 80958,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -961,7 +961,7 @@
             {
               "method": "unbounded",
               "iteration": 1,
-              "duration_ns": 81333,
+              "duration_ns": 81291,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -977,79 +977,39 @@
             {
               "method": "lru",
               "iteration": 1,
-              "duration_ns": 14208,
-              "stats": {},
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "lru",
-              "iteration": 2,
-              "duration_ns": 13833,
-              "stats": {},
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "unbounded",
-              "iteration": 2,
-              "duration_ns": 83875,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "compact",
-              "iteration": 2,
-              "duration_ns": 84125,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "unbounded",
-              "iteration": 3,
-              "duration_ns": 83791,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "lru",
-              "iteration": 3,
               "duration_ns": 14458,
               "stats": {},
               "correct": true,
               "status": "passed"
             },
             {
+              "method": "lru",
+              "iteration": 2,
+              "duration_ns": 13750,
+              "stats": {},
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "unbounded",
+              "iteration": 2,
+              "duration_ns": 83833,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
               "method": "compact",
-              "iteration": 3,
-              "duration_ns": 83916,
+              "iteration": 2,
+              "duration_ns": 80625,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1064,7 +1024,7 @@
             },
             {
               "method": "unbounded",
-              "iteration": 4,
+              "iteration": 3,
               "duration_ns": 83375,
               "stats": {
                 "unique_pages": 64,
@@ -1079,9 +1039,49 @@
               "status": "passed"
             },
             {
+              "method": "lru",
+              "iteration": 3,
+              "duration_ns": 13959,
+              "stats": {},
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "compact",
+              "iteration": 3,
+              "duration_ns": 80875,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "unbounded",
+              "iteration": 4,
+              "duration_ns": 80667,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
               "method": "compact",
               "iteration": 4,
-              "duration_ns": 81250,
+              "duration_ns": 80209,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1097,7 +1097,7 @@
             {
               "method": "lru",
               "iteration": 4,
-              "duration_ns": 14083,
+              "duration_ns": 13875,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -1107,7 +1107,7 @@
             {
               "method": "unbounded",
               "iteration": -1,
-              "duration_ns": 152542,
+              "duration_ns": 124500,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1123,7 +1123,7 @@
             {
               "method": "compact",
               "iteration": -1,
-              "duration_ns": 88167,
+              "duration_ns": 83834,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1139,7 +1139,7 @@
             {
               "method": "lru",
               "iteration": -1,
-              "duration_ns": 16666,
+              "duration_ns": 16167,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -1149,26 +1149,26 @@
             "compact": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 83916,
-              "min_ns": 81250,
-              "max_ns": 86041,
-              "requests_per_second": 190666.857333524
+              "median_ns": 80875,
+              "min_ns": 80209,
+              "max_ns": 82625,
+              "requests_per_second": 197836.16692426585
             },
             "unbounded": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 83791,
-              "min_ns": 81333,
-              "max_ns": 84542,
-              "requests_per_second": 190951.2954851953
+              "median_ns": 81291,
+              "min_ns": 80667,
+              "max_ns": 83833,
+              "requests_per_second": 196823.75662742494
             },
             "lru": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 14208,
-              "min_ns": 13833,
-              "max_ns": 14750,
-              "requests_per_second": 1126126.1261261262
+              "median_ns": 13959,
+              "min_ns": 13750,
+              "max_ns": 14458,
+              "requests_per_second": 1146213.912171359
             }
           },
           "order": [
@@ -1288,7 +1288,7 @@
             {
               "method": "unbounded",
               "iteration": 0,
-              "duration_ns": 107500,
+              "duration_ns": 83750,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1304,7 +1304,7 @@
             {
               "method": "lru",
               "iteration": 0,
-              "duration_ns": 77000,
+              "duration_ns": 64958,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -1312,7 +1312,7 @@
             {
               "method": "compact",
               "iteration": 0,
-              "duration_ns": 88333,
+              "duration_ns": 83042,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1328,7 +1328,7 @@
             {
               "method": "compact",
               "iteration": 1,
-              "duration_ns": 84958,
+              "duration_ns": 82750,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1344,7 +1344,7 @@
             {
               "method": "lru",
               "iteration": 1,
-              "duration_ns": 66125,
+              "duration_ns": 64500,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -1352,7 +1352,7 @@
             {
               "method": "unbounded",
               "iteration": 1,
-              "duration_ns": 87500,
+              "duration_ns": 82916,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1368,6 +1368,102 @@
             {
               "method": "unbounded",
               "iteration": 2,
+              "duration_ns": 82333,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "lru",
+              "iteration": 2,
+              "duration_ns": 64167,
+              "stats": {},
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "compact",
+              "iteration": 2,
+              "duration_ns": 82875,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "lru",
+              "iteration": 3,
+              "duration_ns": 65625,
+              "stats": {},
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "compact",
+              "iteration": 3,
+              "duration_ns": 178166,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "unbounded",
+              "iteration": 3,
+              "duration_ns": 200334,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "unbounded",
+              "iteration": 4,
+              "duration_ns": 97750,
+              "stats": {
+                "unique_pages": 64,
+                "allocated_slots": 1024,
+                "compactions": 0,
+                "accesses": 64,
+                "requests": 16,
+                "measured_requests": 16,
+                "total_tokens": 1144
+              },
+              "correct": true,
+              "status": "passed"
+            },
+            {
+              "method": "compact",
+              "iteration": 4,
               "duration_ns": 86500,
               "stats": {
                 "unique_pages": 64,
@@ -1383,104 +1479,8 @@
             },
             {
               "method": "lru",
-              "iteration": 2,
-              "duration_ns": 66625,
-              "stats": {},
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "compact",
-              "iteration": 2,
-              "duration_ns": 86416,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "lru",
-              "iteration": 3,
-              "duration_ns": 65708,
-              "stats": {},
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "compact",
-              "iteration": 3,
-              "duration_ns": 82750,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "unbounded",
-              "iteration": 3,
-              "duration_ns": 82459,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "unbounded",
               "iteration": 4,
-              "duration_ns": 83000,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "compact",
-              "iteration": 4,
-              "duration_ns": 82583,
-              "stats": {
-                "unique_pages": 64,
-                "allocated_slots": 1024,
-                "compactions": 0,
-                "accesses": 64,
-                "requests": 16,
-                "measured_requests": 16,
-                "total_tokens": 1144
-              },
-              "correct": true,
-              "status": "passed"
-            },
-            {
-              "method": "lru",
-              "iteration": 4,
-              "duration_ns": 63459,
+              "duration_ns": 71084,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -1490,7 +1490,7 @@
             {
               "method": "compact",
               "iteration": -1,
-              "duration_ns": 93375,
+              "duration_ns": 91167,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1506,7 +1506,7 @@
             {
               "method": "unbounded",
               "iteration": -1,
-              "duration_ns": 200084,
+              "duration_ns": 84083,
               "stats": {
                 "unique_pages": 64,
                 "allocated_slots": 1024,
@@ -1522,7 +1522,7 @@
             {
               "method": "lru",
               "iteration": -1,
-              "duration_ns": 125750,
+              "duration_ns": 72875,
               "stats": {},
               "correct": true,
               "status": "passed"
@@ -1532,26 +1532,26 @@
             "compact": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 84958,
-              "min_ns": 82583,
-              "max_ns": 88333,
-              "requests_per_second": 188328.35047906023
+              "median_ns": 83042,
+              "min_ns": 82750,
+              "max_ns": 178166,
+              "requests_per_second": 192673.5868596614
             },
             "unbounded": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 86500,
-              "min_ns": 82459,
-              "max_ns": 107500,
-              "requests_per_second": 184971.09826589594
+              "median_ns": 83750,
+              "min_ns": 82333,
+              "max_ns": 200334,
+              "requests_per_second": 191044.776119403
             },
             "lru": {
               "status": "passed",
               "samples": 5,
-              "median_ns": 66125,
-              "min_ns": 63459,
-              "max_ns": 77000,
-              "requests_per_second": 241965.97353497165
+              "median_ns": 64958,
+              "min_ns": 64167,
+              "max_ns": 71084,
+              "requests_per_second": 246313.00224760614
             }
           },
           "order": [
@@ -1607,7 +1607,7 @@
           "memory": {
             "compact": {
               "status": "passed",
-              "peak_rss_bytes": 25968640,
+              "peak_rss_bytes": 25706496,
               "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
               "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
               "samples": 1,
@@ -1639,7 +1639,7 @@
             },
             "lru": {
               "status": "passed",
-              "peak_rss_bytes": 26132480,
+              "peak_rss_bytes": 26148864,
               "scope": "fresh subprocess, Python runtime + input loading + analyzer + curve",
               "measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
               "samples": 1,
@@ -1653,7 +1653,7 @@
         "seed": 20260927,
         "normalized_requests_sha256": "1ceec76e8565cc123ed763410b56b83afc52821ae932fefd45fb74c85dfacd93",
         "normalized_hash_encoding": "UTF-8 compact JSON object per request + LF; original order",
-        "loading_and_normalization_ns": 234416,
+        "loading_and_normalization_ns": 169625,
         "requests": 16,
         "full_block_accesses": 64,
         "input_tokens": 1144
@@ -1663,6 +1663,6 @@
   "status": "passed",
   "timed_scope": "fresh analyzer initialization, all trace analysis, curve construction; excludes file IO and normalization",
   "normalization_scope": "file read/parse/hash or deterministic synthetic generation; separate",
-  "finished_at_utc": "2026-09-26T16:58:35.361054+00:00",
-  "benchmark_wall_ns": 665639833
+  "finished_at_utc": "2026-09-26T17:02:52.865495+00:00",
+  "benchmark_wall_ns": 465733666
 }

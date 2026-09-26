@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checks": [
+    {
+      "name": "build",
+      "command": [
+        "python",
+        "-m",
+        "build",
+        "--no-isolation"
+      ],
+      "started_at_utc": "2026-09-26T17:04:36.630996+00:00",
+      "duration_seconds": 1.0256972500355914,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "ing build/lib/prefixscope/__main__.py -> build/bdist.macosx-10.9-universal2/wheel/./prefixscope\nrunning install_egg_info\nCopying src/prefixscope.egg-info to build/bdist.macosx-10.9-universal2/wheel/./prefixscope-0.1.0-py3.12.egg-info\nrunning install_scripts\ncreating build/bdist.macosx-10.9-universal2/wheel/prefixscope-0.1.0.dist-info/WHEEL\ncreating './dist/.tmp-95jecwjr/prefixscope-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-10.9-universal2/wheel' to it\nadding 'prefixscope/__init__.py'\nadding 'prefixscope/__main__.py'\nadding 'prefixscope/cli.py'\nadding 'prefixscope/model.py'\nadding 'prefixscope/profiler.py'\nadding 'prefixscope/rank.py'\nadding 'prefixscope/reference.py'\nadding 'prefixscope/trace.py'\nadding 'prefixscope-0.1.0.dist-info/licenses/LICENSE'\nadding 'prefixscope-0.1.0.dist-info/licenses/NOTICE.md'\nadding 'prefixscope-0.1.0.dist-info/METADATA'\nadding 'prefixscope-0.1.0.dist-info/WHEEL'\nadding 'prefixscope-0.1.0.dist-info/entry_points.txt'\nadding 'prefixscope-0.1.0.dist-info/top_level.txt'\nadding 'prefixscope-0.1.0.dist-info/RECORD'\nremoving build/bdist.macosx-10.9-universal2/wheel\nSuccessfully built prefixscope-0.1.0.tar.gz and prefixscope-0.1.0-py3-none-any.whl\n",
+      "evidence": "results/final-package/build.log",
+      "source": {
+        "git_revision": "4eefb4fbced731a35900a4a1457734c73b026bde",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      },
+      "verification_inputs_sha256": "f0effb515299cf35984960e3a6dd98b25a882f010b1c0b2ab45c15c57b15b5fe"
+    },
+    {
+      "name": "clean_install",
+      "command": [
+        "python",
+        "scripts/verify_install.py"
+      ],
+      "started_at_utc": "2026-09-26T17:04:37.712700+00:00",
+      "duration_seconds": 23.740421500056982,
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\"step\": 0, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"pip\", \"install\", \"--require-hashes\", \"-r\", \"./requirements.lock\"], \"exit_code\": 0}\n{\"step\": 1, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"pip\", \"install\", \"--no-index\", \"--no-deps\", \"./dist/prefixscope-0.1.0-py3-none-any.whl\"], \"exit_code\": 0}\n{\"step\": 2, \"command\": [\"<clean-env>/bin/python\", \"-c\", \"from prefixscope import Profile,Request; p=Profile(); p.observe(Request(('a',),16)); assert p.curve([1])[0]['total_tokens']==16\"], \"exit_code\": 0}\n{\"step\": 3, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"prefixscope\", \"demo\"], \"exit_code\": 0}\n{\"step\": 4, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"prefixscope\", \"analyze\", \"./examples/tokens.jsonl\", \"--format\", \"tokens\", \"--capacities\", \"0,4,5,16,64\"], \"exit_code\": 0}\n{\"step\": 5, \"command\": [\"<clean-env>/bin/python\", \"-m\", \"pip\", \"check\"], \"exit_code\": 0}\nClean environment and installed wheel passed / \u5e72\u51c0\u73af\u5883\u4e0e\u5df2\u5b89\u88c5wheel\u9a8c\u8bc1\u901a\u8fc7\n",
+      "evidence": "results/final-package/clean_install.log",
+      "source": {
+        "git_revision": "4eefb4fbced731a35900a4a1457734c73b026bde",
+        "working_tree_dirty": true,
+        "source_sha256": "503a3a6f292032d8a551a1d60dd88eb9291abc7beb0b8481f82f4125a2cb5cff",
+        "hash_scope": "src/**/*.py + benchmark.py + experiments/contract.json; path NUL bytes NUL",
+        "version": "0.1.0"
+      },
+      "verification_inputs_sha256": "f0effb515299cf35984960e3a6dd98b25a882f010b1c0b2ab45c15c57b15b5fe"
+    }
+  ],
+  "status": "passed"
+}

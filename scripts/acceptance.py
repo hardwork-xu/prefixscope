@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
 import shutil
@@ -17,6 +18,30 @@ spec = importlib.util.spec_from_file_location("benchmark", ROOT / "benchmark.py"
 assert spec and spec.loader
 benchmark = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(benchmark)
+
+
+def verification_inputs() -> str:
+    digest = hashlib.sha256()
+    files = []
+    for directory in (
+        "src",
+        "tests",
+        "scripts",
+        "docs",
+        "examples",
+        "experiments",
+        ".github",
+        "assets",
+        "third_party",
+    ):
+        files.extend(
+            p for p in (ROOT / directory).rglob("*") if p.is_file() and "__pycache__" not in p.parts
+        )
+    files.extend(p for p in ROOT.iterdir() if p.is_file() and p.name not in {".DS_Store"})
+    for path in sorted(files):
+        digest.update(path.relative_to(ROOT).as_posix().encode() + b"\0")
+        digest.update(path.read_bytes() + b"\0")
+    return digest.hexdigest()
 
 
 def record(name: str, command: list[str], directory: Path) -> dict:
@@ -39,6 +64,7 @@ def record(name: str, command: list[str], directory: Path) -> dict:
         "summary": clean[-1200:],
         "evidence": log.relative_to(ROOT).as_posix(),
         "source": benchmark.source_version(),
+        "verification_inputs_sha256": verification_inputs(),
     }
 
 
@@ -122,6 +148,7 @@ def main() -> int:
                     "summary": "Docker executable absent on local host / 本机没有Docker可执行文件",
                     "evidence": "results/environment.json",
                     "source": benchmark.source_version(),
+                    "verification_inputs_sha256": verification_inputs(),
                 }
             )
     payload = {

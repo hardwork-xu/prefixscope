@@ -186,7 +186,7 @@ running install_egg_info
 Copying src/prefixscope.egg-info to build/bdist.macosx-10.9-universal2/wheel/./prefixscope-0.1.0-py3.12.egg-info
 running install_scripts
 creating build/bdist.macosx-10.9-universal2/wheel/prefixscope-0.1.0.dist-info/WHEEL
-creating './dist/.tmp-l3b3mxsf/prefixscope-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-10.9-universal2/wheel' to it
+creating './dist/.tmp-95jecwjr/prefixscope-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-10.9-universal2/wheel' to it
 adding 'prefixscope/__init__.py'
 adding 'prefixscope/__main__.py'
 adding 'prefixscope/cli.py'

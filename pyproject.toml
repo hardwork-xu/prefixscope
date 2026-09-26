@@ -12,6 +12,10 @@ license = "MIT"
 authors = [{name = "Xu Yixian"}]
 dependencies = []
 
+[project.urls]
+Repository = "https://github.com/hardwork-xu/prefixscope"
+Documentation = "https://github.com/hardwork-xu/prefixscope/blob/main/README.md"
+
 [project.scripts]
 prefixscope = "prefixscope.cli:main"
 

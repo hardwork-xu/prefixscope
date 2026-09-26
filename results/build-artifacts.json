@@ -1,17 +1,17 @@
 [
   {
     "file": "dist/prefixscope-0.1.0-py3-none-any.whl",
-    "sha256": "cd2b554d17ee0515e2b5f6fae093fb74b9b55f132e3185aae052483be2c75ddc",
-    "bytes": 21910,
+    "sha256": "4a493297d17cae3a8b4c6d40571d3265bb14b9bdd614b7d679e64ddced156a9a",
+    "bytes": 22012,
     "members": 15,
     "archive_integrity": "passed",
     "private_or_raw_data_members": false
   },
   {
     "file": "dist/prefixscope-0.1.0.tar.gz",
-    "sha256": "1599395ba555e07d95897941166617b25da18b70188c7709cb7793cfb46df694",
-    "bytes": 222318,
-    "members": 88,
+    "sha256": "0b2743778b690431c103d1361cd3a62fdcae5e9e09dd2d6b3e05ef8238911361",
+    "bytes": 234141,
+    "members": 112,
     "archive_integrity": "passed",
     "private_or_raw_data_members": false
   }

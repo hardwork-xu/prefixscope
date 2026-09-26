@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-09-26T17:01:52.824170+00:00",
+  "repository": {
+    "defaultBranchRef": {
+      "name": "main"
+    },
+    "nameWithOwner": "hardwork-xu/prefixscope",
+    "url": "https://github.com/hardwork-xu/prefixscope",
+    "visibility": "PUBLIC"
+  },
+  "verified_remote_commit": "4eefb4fbced731a35900a4a1457734c73b026bde",
+  "initial_ci": {
+    "conclusion": "success",
+    "headSha": "4eefb4fbced731a35900a4a1457734c73b026bde",
+    "jobs": [
+      {
+        "completedAt": "2026-09-26T17:00:23Z",
+        "conclusion": "success",
+        "databaseId": 108446800101,
+        "name": "container",
+        "startedAt": "2026-09-26T16:59:59Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-09-26T17:00:00Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-09-26T16:59:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:01Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "startedAt": "2026-09-26T17:00:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:21Z",
+            "conclusion": "success",
+            "name": "Run docker build -t prefixscope:test .",
+            "number": 3,
+            "startedAt": "2026-09-26T17:00:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:21Z",
+            "conclusion": "success",
+            "name": "Run docker run --rm prefixscope:test demo",
+            "number": 4,
+            "startedAt": "2026-09-26T17:00:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:22Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 8,
+            "startedAt": "2026-09-26T17:00:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:22Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 9,
+            "startedAt": "2026-09-26T17:00:22Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/hardwork-xu/prefixscope/actions/runs/36257440298/job/108446800101"
+      },
+      {
+        "completedAt": "2026-09-26T17:00:31Z",
+        "conclusion": "success",
+        "databaseId": 108446800154,
+        "name": "test (3.12)",
+        "startedAt": "2026-09-26T17:00:00Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-09-26T17:00:02Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-09-26T17:00:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:03Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "startedAt": "2026-09-26T17:00:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:03Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "number": 3,
+            "startedAt": "2026-09-26T17:00:03Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:19Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --require-hashes -r requirements.lock",
+            "number": 4,
+            "startedAt": "2026-09-26T17:00:03Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:21Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --no-build-isolation -e .",
+            "number": 5,
+            "startedAt": "2026-09-26T17:00:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:28Z",
+            "conclusion": "success",
+            "name": "Run make PYTHON=python check test demo build",
+            "number": 6,
+            "startedAt": "2026-09-26T17:00:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:29Z",
+            "conclusion": "success",
+            "name": "Run python benchmark.py --quick --output results/ci-smoke.json",
+            "number": 7,
+            "startedAt": "2026-09-26T17:00:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:29Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "number": 13,
+            "startedAt": "2026-09-26T17:00:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:29Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 14,
+            "startedAt": "2026-09-26T17:00:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:29Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 15,
+            "startedAt": "2026-09-26T17:00:29Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/hardwork-xu/prefixscope/actions/runs/36257440298/job/108446800154"
+      },
+      {
+        "completedAt": "2026-09-26T17:00:22Z",
+        "conclusion": "success",
+        "databaseId": 108446800283,
+        "name": "test (3.11)",
+        "startedAt": "2026-09-26T16:59:59Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-09-26T17:00:01Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-09-26T17:00:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:02Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "startedAt": "2026-09-26T17:00:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:02Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "number": 3,
+            "startedAt": "2026-09-26T17:00:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:12Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --require-hashes -r requirements.lock",
+            "number": 4,
+            "startedAt": "2026-09-26T17:00:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:13Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --no-build-isolation -e .",
+            "number": 5,
+            "startedAt": "2026-09-26T17:00:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:18Z",
+            "conclusion": "success",
+            "name": "Run make PYTHON=python check test demo build",
+            "number": 6,
+            "startedAt": "2026-09-26T17:00:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:19Z",
+            "conclusion": "success",
+            "name": "Run python benchmark.py --quick --output results/ci-smoke.json",
+            "number": 7,
+            "startedAt": "2026-09-26T17:00:18Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:19Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+            "number": 13,
+            "startedAt": "2026-09-26T17:00:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:19Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 14,
+            "startedAt": "2026-09-26T17:00:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-09-26T17:00:19Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 15,
+            "startedAt": "2026-09-26T17:00:19Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/hardwork-xu/prefixscope/actions/runs/36257440298/job/108446800283"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/hardwork-xu/prefixscope/actions/runs/36257440298"
+  },
+  "scope": "Initial publication verification; later documentation commits may follow. Refer to GitHub for latest run.",
+  "local_container": "not_run; executable absent",
+  "remote_container": "passed on ubuntu-24.04 GitHub Actions",
+  "not_executed": [
+    "PyPI upload",
+    "GitHub Release creation",
+    "DOI registration",
+    "container registry push",
+    "public service deployment"
+  ]
+}
